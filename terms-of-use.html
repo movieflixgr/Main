@@ -4,27 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Όροι Χρήσης - MovieFlix</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="icon.png" type="image/png">
 
     <style>
+        /* GLOBAL BODY */
         body {
-            background: #0a0a0a;
+            margin: 0;
+            background: #070b1a; /* ίδιο με το homepage header */
             color: #e6e6e6;
             font-family: Arial, sans-serif;
         }
 
+        /* HEADER (ίδιο με Home) */
+        header {
+            background-color: #070b1a;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+        }
+
+        header .logo img {
+            height: 42px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 32px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: 0.2s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: #FFD700;
+        }
+
+        /* CONTAINER */
         .policy-container {
             margin: 60px auto;
             width: 70%;
-            padding: 25px;
-            background: rgba(20, 20, 20, 0.85);
-            border-radius: 12px;
-            box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.40);
+            border-radius: 16px;
+            box-shadow: 0 0 35px rgba(255, 215, 0, 0.15);
+            backdrop-filter: blur(6px);
         }
 
         .policy-title {
             font-size: 2.6rem;
+            text-align: center;
             color: #FFD700;
             margin-bottom: 25px;
             border-bottom: 2px solid #FFD700;
@@ -41,8 +76,8 @@
         }
 
         .policy-text {
-            font-size: 1.05rem;
-            line-height: 1.65;
+            font-size: 1.15rem;
+            line-height: 1.7;
             margin-bottom: 20px;
         }
 
@@ -55,8 +90,21 @@
             opacity: 0.8;
         }
 
+        ul li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
         @media (max-width: 768px) {
-            .policy-container { width: 90%; }
+            .policy-container { width: 90%; padding: 25px; }
         }
     </style>
 </head>
@@ -82,64 +130,55 @@
 
     <p class="policy-text">
         Με τη χρήση της εφαρμογής MovieFlix, συμφωνείτε με τους παρακάτω Όρους Χρήσης.
-        Η εφαρμογή παρέχεται δωρεάν και λειτουργεί αποκλειστικά ως εργαλείο περιήγησης και αναπαραγωγής πολυμέσων που προέρχονται από δημόσιες πηγές μέσω του διαδικτύου.
+        Η εφαρμογή λειτουργεί αποκλειστικά ως εργαλείο πλοήγησης και αναπαραγωγής περιεχομένου που προέρχεται από δημόσιες διαδικτυακές πηγές.
     </p>
 
     <h3 class="section-title">1. Χρήση της Εφαρμογής</h3>
     <p class="policy-text">
-        Η εφαρμογή δεν φιλοξενεί, αποθηκεύει ή μεταδίδει περιεχόμενο που προστατεύεται από πνευματικά δικαιώματα. 
-        Το MovieFlix λειτουργεί ως media browser που ανακατευθύνει τον χρήστη σε πηγές πολυμέσων που είναι διαθέσιμες διαδικτυακά.
+        Η εφαρμογή δεν φιλοξενεί, αποθηκεύει ή μεταδίδει αρχεία προστατευόμενα από πνευματικά δικαιώματα.
+        Το MovieFlix λειτουργεί ως media browser που ανακατευθύνει τον χρήστη σε δημόσιες εξωτερικές πηγές.
     </p>
 
     <p class="policy-text">
-        Οι χρήστες συμφωνούν να χρησιμοποιούν την εφαρμογή σύμφωνα με τους νόμους και να μην παρακάμπτουν περιορισμούς πρόσβασης ή διανομής περιεχομένου.
+        Οι χρήστες οφείλουν να χρησιμοποιούν την εφαρμογή σύμφωνα με τη νομοθεσία και να μην παρακάμπτουν περιορισμούς πρόσβασης.
     </p>
 
     <h3 class="section-title">2. Περιεχόμενο & Πνευματικά Δικαιώματα</h3>
     <p class="policy-text">
-        Όλο το περιεχόμενο που προβάλλεται μέσω της εφαρμογής ανήκει στους νόμιμους κατόχους του.
-        Αν κάποιο υλικό παρουσιάζει παραβίαση πνευματικών δικαιωμάτων, αυτό οφείλεται σε αλλαγές ή ενέργειες τρίτων παρόχων περιεχομένου.
+        Όλο το περιεχόμενο ανήκει στους νόμιμους κατόχους του.
+        Αν παρουσιαστεί παραβίαση πνευματικών δικαιωμάτων, αυτή οφείλεται αποκλειστικά σε εξωτερικούς παρόχους περιεχομένου.
     </p>
 
     <p class="policy-text">
-        Εάν είστε κάτοχος πνευματικών δικαιωμάτων και θεωρείτε ότι κάποιο εξωτερικό link ή stream παραβιάζει τα δικαιώματά σας, μπορείτε να υποβάλετε σχετική αναφορά για άμεση αφαίρεση.
+        Αν είστε κάτοχος πνευματικών δικαιωμάτων και κάποιο εξωτερικό link παραβιάζει τα δικαιώματά σας,
+        μπορείτε να υποβάλετε αίτημα αφαίρεσης.
     </p>
 
     <h3 class="section-title">3. Αναφορές DMCA</h3>
     <p class="policy-text">
-        Παρέχουμε ειδική φόρμα αναφοράς για αναφορές πνευματικών δικαιωμάτων, σύμφωνα με τον DMCA.
-        Η ομάδα μας εξετάζει και αφαιρεί άμεσα οποιοδήποτε εξωτερικό link δημιουργεί ζήτημα.
+        Παρέχουμε ειδική φόρμα για αναφορές DMCA. Κάθε έγκυρη αναφορά εξετάζεται άμεσα.
     </p>
 
     <p class="policy-text">
-        Φόρμα Αναφοράς:  
-        <a class="policy-link" href="https://forms.gle/etJwWXSagZz8gtwR7">Υποβολή DMCA</a>
+        Φόρμα DMCA:  
+        <a class="policy-link" href="https://forms.gle/etJwWXSagZz8gtwR7">Υποβολή Αναφοράς</a>
     </p>
 
     <h3 class="section-title">4. Περιορισμός Ευθύνης</h3>
-    <p class="policy-text">
-        Η ομάδα ανάπτυξης δεν ευθύνεται για:
-    </p>
+
+    <p class="policy-text">Δεν ευθυνόμαστε για:</p>
 
     <ul>
-        <li class="policy-text">τη λειτουργικότητα ή διαθεσιμότητα εξωτερικών πηγών</li>
-        <li class="policy-text">σφάλματα, καθυστερήσεις ή γεωγραφικούς περιορισμούς στα streams</li>
-        <li class="policy-text">περιεχόμενο που τροποποιείται ή αφαιρείται από τρίτους</li>
+        <li>τη διαθεσιμότητα ή σταθερότητα των εξωτερικών streams</li>
+        <li>γεωγραφικούς περιορισμούς</li>
+        <li>σφάλματα, καθυστερήσεις ή αλλαγές τρίτων παρόχων</li>
     </ul>
 
-    <p class="policy-text">
-        Η χρήση της εφαρμογής γίνεται αποκλειστικά με ευθύνη του χρήστη.
-    </p>
+    <p class="policy-text">Η χρήση της εφαρμογής γίνεται αποκλειστικά με ευθύνη του χρήστη.</p>
 
-    <h3 class="section-title">5. Τροποποιήσεις Όρων</h3>
+    <h3 class="section-title">5. Επικοινωνία</h3>
     <p class="policy-text">
-        Οι παρόντες όροι μπορεί να αλλάξουν οποιαδήποτε στιγμή. 
-        Η συνέχιση της χρήσης της εφαρμογής αποτελεί αποδοχή των ενημερωμένων όρων.
-    </p>
-
-    <h3 class="section-title">6. Επικοινωνία</h3>
-    <p class="policy-text">
-        Για αναφορές, νομικά ζητήματα ή πληροφορίες επικοινωνήστε:  
+        Για θέματα υποστήριξης ή νομικές αναφορές:  
         <a href="mailto:movieflix@europe.com" class="policy-link">movieflix@europe.com</a>
     </p>
 
