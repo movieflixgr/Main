@@ -6,9 +6,151 @@
     <title>MovieFlix – Streaming χωρίς όρια</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="icon.png" type="image/png">
+    
+    <style>
+        /* --- HEADER FIX --- */
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background-color: #070b1a;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .logo-text {
+            color: white;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: 0.2s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #FFD700;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background: #FFD700;
+            padding: 160px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #070b1a;
+        }
+
+        .hero-content p {
+            font-size: 1.4rem;
+            margin-bottom: 35px;
+            color: #070b1a;
+        }
+
+        /* CTA BUTTONS FIX */
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .cta-button {
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s ease;
+        }
+
+        .cta-button.primary {
+            background-color: #070b1a;
+            color: white;
+        }
+
+        .cta-button.primary:hover {
+            opacity: 0.8;
+        }
+
+        .cta-button.secondary {
+            background: white;
+            color: #070b1a;
+            border: 2px solid #070b1a;
+        }
+
+        .cta-button.secondary:hover {
+            background: #070b1a;
+            color: white;
+        }
+
+        /* FEATURES SECTION */
+        .features {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-wrapper {
+            margin-top: 30px;
+        }
+
+        /* VIDEO SECTION */
+        .video {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .video-container {
+            margin-top: 20px;
+        }
+
+        .video iframe {
+            width: 70%;
+            height: 400px;
+            max-width: 900px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #070b1a;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 
 <body>
+
     <header class="main-header">
         <div class="logo">
             <img src="icon.png" alt="MovieFlix Logo">
@@ -26,8 +168,6 @@
 
     <!-- HERO SECTION -->
     <section class="hero">
-        <div class="hero-overlay"></div>
-
         <div class="hero-content">
             <h1>Το Ελληνικό Streaming που θέλεις.</h1>
             <p>Ταινίες, Σειρές, Live TV & Kids περιεχόμενο — όλα δωρεάν.</p>
@@ -36,7 +176,10 @@
                 <a href="https://movieflixforusers.vercel.app/install_movieflix.gif" class="cta-button primary">
                     Κατεβάστε στο Google Play
                 </a>
-                <a href="#video" class="cta-button secondary">Δες το Trailer</a>
+
+                <a href="#video" class="cta-button secondary">
+                    Δες το Trailer
+                </a>
             </div>
         </div>
     </section>
@@ -69,6 +212,5 @@
         <p>&copy; 2025 MovieFlix. All Rights Reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
